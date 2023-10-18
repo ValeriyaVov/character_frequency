@@ -10,7 +10,6 @@ import org.springframework.test.web.servlet.MvcResult;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-
 @SpringBootTest
 @AutoConfigureMockMvc
 public class FrequencyControllerTest {
@@ -25,7 +24,7 @@ public class FrequencyControllerTest {
         String input = "aaaaabcccc";
         MvcResult result = this.mockMvc.perform(get(URL + input))
                 .andExpect(status().isOk())
-                .andExpect(content().string("{\"a\":5,\"b\":1,\"c\":4}"))
+                .andExpect(content().string("{\"a\":5,\"c\":4,\"b\":1}"))
                 .andReturn();
         result.getResponse().getContentAsString();
     }

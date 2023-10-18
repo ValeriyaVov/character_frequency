@@ -19,7 +19,7 @@ import java.util.Map;
 @OpenAPIDefinition(info = @Info(title = "Frequency Calculator API", description =
         "Character Frequency Calculator API is a RESTful web service designed to calculate the frequency of occurrence " +
                 "of characters in a given string. The API allows users to send a string in a request and receive " +
-                "a JSON object in response with a sorted list of characters and the number of their occurrences " +
+                "a JSON object in response with a list of characters sorted by frequency and the number of their occurrences " +
                 "in a given string", version = "1.0"
 ))
 @RestController
@@ -28,7 +28,7 @@ public class FrequencyController {
     @Autowired
     private FrequencyCalculator frequencyCalculator;
 
-    @Operation(summary = "Get a frequency of each character in given line")
+    @Operation(summary = "Get a frequency of each character in given line sorted by frequency in descending order")
     @ApiResponse(
             responseCode = "200",
             description = "Success",
@@ -37,8 +37,8 @@ public class FrequencyController {
                             """
                                     {
                                       "a": 5,
-                                      "b": 3,
                                       "c": 4,
+                                      "b": 3,
                                       "d": 2
                                     }
                             """
