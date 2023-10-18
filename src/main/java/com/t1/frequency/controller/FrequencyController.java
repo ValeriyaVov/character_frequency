@@ -16,13 +16,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Map;
 
-@OpenAPIDefinition(info = @Info(title = "Frequency Analyzer API", description =
-        "Character Frequency Analyzer API is a RESTful web service designed to calculate the frequency of occurrence " +
+@OpenAPIDefinition(info = @Info(title = "Frequency Calculator API", description =
+        "Character Frequency Calculator API is a RESTful web service designed to calculate the frequency of occurrence " +
                 "of characters in a given string. The API allows users to send a string in a request and receive " +
                 "a JSON object in response with a sorted list of characters and the number of their occurrences " +
                 "in a given string", version = "1.0"
 ))
-@RestController("/api/v1/")
+@RestController
 public class FrequencyController {
 
     @Autowired

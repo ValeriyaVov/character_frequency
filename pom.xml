@@ -10,11 +10,12 @@
 	</parent>
 	<groupId>com.t1</groupId>
 	<artifactId>character_frequency</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>character_frequency</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Character frequency calculator</description>
 	<properties>
 		<java.version>17</java.version>
+		<main.class>com.t1.frequency.CharacterFrequencyApplication</main.class>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -48,6 +49,19 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<classifier>spring-boot</classifier>
+					<mainClass>${main.class}</mainClass>
+				</configuration>
+				<executions>
+					<execution>
+						<id>repackage</id>
+						<phase>package</phase>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>

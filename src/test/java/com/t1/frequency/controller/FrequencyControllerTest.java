@@ -15,7 +15,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc
 public class FrequencyControllerTest {
 
-    private static final String URL = "/api/v1/calculate-frequency?input=";
+    private static final String URL = "/calculate-frequency?input=";
 
     @Autowired
     private MockMvc mockMvc;
